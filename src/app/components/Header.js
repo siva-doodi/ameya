@@ -147,7 +147,7 @@ export default function Header() {
 
             {/* Mobile Menu */}
             {isMobileMenuOpen && (
-                <nav id="mobile-menu" ref={mobileMenuRef} className="lg:hidden bg-[#b72960]">
+                <nav id="mobile-menu" ref={mobileMenuRef} className="lg:hidden bg-primary-bg">
                     <Link href="/" className="block px-4 py-3 border-b border-pink-200 text-white hover:bg-[#a21c4b]">Home</Link>
 
                     {/* Mobile Services accordion */}
