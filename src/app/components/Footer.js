@@ -13,11 +13,11 @@ const Footer = () => {
                         <div>
                             <Link href="/">
                                 <Image
-                                    src="/images/fotter_logo_ameya.png"
+                                    src="/images/foo-img.png"
                                     alt="Ameya Logo"
-                                    width={120}
-                                    height={50}
-                                    className="mb-4"
+                                    width={160}
+                                    height={120}
+                                    className="mb-1"
                                 />
                             </Link>
                             <p className=" text-sm leading-relaxed">
