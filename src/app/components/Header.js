@@ -82,7 +82,7 @@ export default function Header() {
                 <nav className="hidden lg:flex items-center gap-8 font-semibold text-primary-text text-[16px]">
                     <Link href="/" className="hover:underline">Home</Link>
 
-                    {/* <div ref={servicesRef} className="relative">
+                    <div ref={servicesRef} className="relative">
                         <button
                             type="button"
                             aria-haspopup="true"
@@ -109,7 +109,7 @@ export default function Header() {
                             <Link href="/services/ai-ml" role="menuitem" className="block px-4 py-2 hover:bg-pink-50">AI-ML</Link>
                             <Link href="/services/cloud-services" role="menuitem" className="block px-4 py-2 hover:bg-pink-50">Cloud Services</Link>
                         </div>
-                    </div> */}
+                    </div>
 
                     <Link href="/about" className="hover:underline">About</Link>
                     <Link href="/careers" className="hover:underline">Careers</Link>
