@@ -35,12 +35,13 @@ const AboutPage = () => {
                     <div>
                         <div className="max-w-7xl mx-auto flex flex-col justify-center items-center lg:flex-row gap-10">
                             <div className="lg:w-1/2 lg:text-center lg:text-left">
-
                                 <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mt-8 mb-4">
                                     About <span className="text-primary-text">Ameya Software</span>
                                 </h1>
-                                <Text variant="p">We are a passionate team of innovators, designers, and engineers
+                                <div className="mb-4">
+                                    <Text variant="p">We are a passionate team of innovators, designers, and engineers
                                     dedicated to building digital products that make a difference.</Text>
+                                </div>
                                 <RoundButton
                                     text="Join Our Journey 🚀"
                                 />
