@@ -1,10 +1,8 @@
 'use client';
 import React from "react";
-import Button from "../../components/Button";
+import Button from "../../components/common/Button";
 import Image from 'next/image';
 import RoundButton from "../common/RoundButton";
-import { VscTools } from "react-icons/vsc";
-import { TbBulbFilled } from "react-icons/tb";
 import MyImage from "../MyImage";
 import Text from '../common/Text'
 const AiServiceSection = () => {
@@ -57,7 +55,7 @@ const AiServiceSection = () => {
                 <div className="lg:w-1/2 grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
                     <div className="flex  justify-center gap-4 p-6 h-[180px] border border-gray-200 rounded-sm hover:shadow-lg transition">
                         <div className="flex-shrink-0 rounded-full bg-[#608BC1] w-12 h-12 flex justify-center items-center text-white text-lg">
-                            <TbBulbFilled />
+                            
                         </div>
                         <div>
                             <h5 className="text-lg font-semibold text-gray-800 mb-1">
@@ -70,7 +68,7 @@ const AiServiceSection = () => {
                     </div>
                     <div className="flex  justify-center gap-4 p-6 h-[210px] border border-gray-200 rounded-sm  hover:shadow-lg transition">
                         <div className="flex-shrink-0 rounded-full bg-[#b72960] w-12 h-12 flex justify-center items-center text-white text-lg">
-                            <VscTools />
+                           
                         </div>
                         <div>
                             <Text variant="h5">Innovative Tools</Text>
