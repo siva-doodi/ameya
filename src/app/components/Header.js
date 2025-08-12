@@ -91,7 +91,7 @@ export default function Header() {
                             className="flex items-center gap-2 focus:outline-none cursor-pointer"
                         >
                             <span>Services</span>
-                           
+
                             <svg className={`w-4 h-4 transition-transform ${isServicesOpen ? 'rotate-180' : 'rotate-0'}`} viewBox="0 0 20 20" fill="currentColor">
                                 <path d="M5.23 7.21a.75.75 0 011.06-.02L10 10.86l3.71-3.67a.75.75 0 011.06 1.06l-4.24 4.2a.75.75 0 01-1.06 0L5.25 8.27a.75.75 0 01-.02-1.06z" />
                             </svg>
@@ -103,11 +103,12 @@ export default function Header() {
                             className={`absolute  text-sm bg-white text-secondary-text font-[500] p-2 left-0 top-full mt-2 w-56 rounded-md border border-gray-600 bg-white shadow-lg z-50 transform transition-all duration-150
                 ${isServicesOpen ? 'opacity-100 visible pointer-events-auto translate-y-0' : 'opacity-0 invisible pointer-events-none -translate-y-1'}`}
                         >
-                            <Link href="/services/web-development" role="menuitem" className="block px-4 py-2 hover:bg-pink-50">Web Development</Link>
-                            <Link href="/services/app-development" role="menuitem" className="block px-4 py-2 hover:bg-pink-50">App Development</Link>
-                            <Link href="/services/sap-services" role="menuitem" className="block px-4 py-2 hover:bg-pink-50">SAP Services</Link>
-                            <Link href="/services/ai-ml" role="menuitem" className="block px-4 py-2 hover:bg-pink-50">AI-ML</Link>
-                            <Link href="/services/cloud-services" role="menuitem" className="block px-4 py-2 hover:bg-pink-50">Cloud Services</Link>
+                           <Link href="/services/web-development">Web Development</Link>
+<Link href="/services/app-development">App Development</Link>
+<Link href="/services/sap-services">SAP Services</Link>
+<Link href="/services/ai-ml">AI-ML</Link>
+<Link href="/services/cloud-services">Cloud Services</Link>
+
                         </div>
                     </div>
 
@@ -150,7 +151,6 @@ export default function Header() {
                 <nav id="mobile-menu" ref={mobileMenuRef} className="lg:hidden bg-primary-bg">
                     <Link href="/" className="block px-4 py-3 border-b border-pink-200 text-white hover:bg-[#a21c4b]">Home</Link>
 
-                    {/* Mobile Services accordion */}
                     <button
                         onClick={() => setIsMobileServicesOpen((s) => !s)}
                         className="w-full text-left px-4 py-3 border-b border-pink-200 text-white flex items-center justify-between hover:bg-[#a21c4b]"

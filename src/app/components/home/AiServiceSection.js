@@ -4,23 +4,30 @@ import Button from "../../components/common/Button";
 import Image from 'next/image';
 import RoundButton from "../common/RoundButton";
 import MyImage from "../MyImage";
-import Text from '../common/Text'
+import Text from '../common/Text';
+import { Lightbulb, Wrench, Target, Rocket,Vibrate,Server,BrainCircuit } from "lucide-react";
+import { FaGlobe, FaMobileAlt, FaServer, FaCloud, FaRobot, FaDatabase } from "react-icons/fa";
 const AiServiceSection = () => {
     const listOfServices = [
-        { id: 1, icon: "", name: "Web Development", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500" },
-        { id: 2, icon: "", name: "App Development", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500" },
-        { id: 3, icon: "", name: "SAP Services", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500" },
-        { id: 4, icon: "", name: "Cloud Services", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500" },
-        { id: 5, icon: "", name: "AI-ML", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500" },
-        { id: 6, icon: "", name: "Data-Science", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500" }
-    ]
+  { id: 1, icon: <FaGlobe  size={25}/>, name: "Web Development", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500" },
+  { id: 2, icon: <Vibrate size={30}/>, name: "App Development", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500" },
+  { id: 3, icon: <Server  size={25}/>, name: "SAP Services", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500" },
+  { id: 4, icon: <FaCloud size={25}/>, name: "Cloud Services", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500" },
+  { id: 5, icon:  <BrainCircuit size={25}/>, name: "AI-ML", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500" },
+  { id: 6, icon: <FaDatabase size={25}/>, name: "Data Science", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500" }
+];
+
     return (
         <>
             <section className="mt-20 px-4 md:px-24 py-12 bg-sky-600 text-white">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     {listOfServices.map((item) => (
                         <div className="flex flex-col gap-2" key={item.id}>
-                            <div className="text-4xl mb-4">{item.icon}</div>
+                            <div className="text-4xl mb-2">
+                                {
+                                    item.icon
+                                }
+                            </div>
                             <Text variant="h4">
                                 {item.name}
                             </Text>
@@ -55,7 +62,7 @@ const AiServiceSection = () => {
                 <div className="lg:w-1/2 grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
                     <div className="flex  justify-center gap-4 p-6 h-[180px] border border-gray-200 rounded-sm hover:shadow-lg transition">
                         <div className="flex-shrink-0 rounded-full bg-[#608BC1] w-12 h-12 flex justify-center items-center text-white text-lg">
-                            
+                            <Lightbulb size={28} />
                         </div>
                         <div>
                             <h5 className="text-lg font-semibold text-gray-800 mb-1">
@@ -68,7 +75,7 @@ const AiServiceSection = () => {
                     </div>
                     <div className="flex  justify-center gap-4 p-6 h-[210px] border border-gray-200 rounded-sm  hover:shadow-lg transition">
                         <div className="flex-shrink-0 rounded-full bg-[#b72960] w-12 h-12 flex justify-center items-center text-white text-lg">
-                           
+                           <Wrench size={28} />
                         </div>
                         <div>
                             <Text variant="h5">Innovative Tools</Text>
@@ -79,12 +86,7 @@ const AiServiceSection = () => {
                     </div>
                     <div className="flex  justify-center gap-4 p-6 h-[180px] border border-gray-200 rounded-sm hover:shadow-lg transition">
                         <div className="flex-shrink-0 rounded-full bg-[#608BC1] w-12 h-12 flex justify-center items-center text-white text-lg">
-                            <MyImage
-                                src="/Icons/arrow_14814061.png"
-                                alt="Gaol"
-                                width="30"
-                                height="30"
-                            />
+                            <Target size={28} />
                         </div>
                         <div>
                             <h5 className="text-lg font-semibold text-gray-800 mb-1">
@@ -97,12 +99,8 @@ const AiServiceSection = () => {
                     </div>
                     <div className="flex  justify-center gap-4 p-6 h-[210px] border border-gray-200 rounded-sm  hover:shadow-lg transition">
                         <div className="flex-shrink-0 rounded-full bg-[#b72960] w-12 h-12 flex justify-center items-center text-white text-lg">
-                            <MyImage
-                                src="/Icons/laptop_2888684.png"
-                                alt="Performance Optmized"
-                                width="20"
-                                height="20"
-                            />
+                            
+                            <Rocket size={28} />
                         </div>
                         <div>
                             <h5 className="text-lg font-semibold text-gray-800 mb-1">

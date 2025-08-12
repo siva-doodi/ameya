@@ -11,12 +11,11 @@ const variants = {
   h5: 'text-lg font-semibold text-gray-800 mb-1',
   h6:'text-xl font-semibold mb-2',
   p: 'text-base text-secondary-text leading-[1.6]',
-  span: 'text-sm text-white',
+  span: 'text-base text-white',
 };
 
 export default function Text({ variant = 'p', className, children, ...props }) {
   const Component = variant; 
-
   return (
     <Component className={clsx(variants[variant], className)} {...props}>
       {children}

@@ -2,6 +2,8 @@
 import React from "react";
 import Image from 'next/image';
 import Link from 'next/link';
+import Text from "./common/Text";
+import MyImage from "./MyImage";
 const Footer = () => {
     return (
         <>
@@ -12,32 +14,28 @@ const Footer = () => {
                         {/* Logo & About */}
                         <div>
                             <Link href="/">
-                                <Image
+                                <MyImage
                                     src="/images/foo-img.png"
                                     alt="Ameya Logo"
-                                    width={160}
-                                    height={120}
+                                    width="160"
+                                    height="120"
                                     className="mb-1"
                                 />
                             </Link>
-                            <p className=" text-sm leading-relaxed">
+                            <Text variant="span">
                                 Ameya delivers innovative software solutions that empower businesses
                                 to grow, transform, and thrive in a digital world.
-                            </p>
+                            </Text>
                         </div>
-
-                        {/* Quick Links */}
                         <div>
                             <h3 className="font-semibold text-lg mb-4">Quick Links</h3>
                             <ul className="space-y-2 ">
                                 <li><Link href="/" className="hover:underline">Home</Link></li>
                                 <li><Link href="/about" className="hover:underline">About</Link></li>
                                 <li><Link href="/careers" className="hover:underline">Careers</Link></li>
-                               <li><Link href="/contact" className="hover:underline">Contact</Link></li>   
+                                <li><Link href="/contact" className="hover:underline">Contact</Link></li>
                             </ul>
                         </div>
-
-                        {/* Services */}
                         <div>
                             <h3 className="font-semibold text-lg mb-4">Services</h3>
                             <ul className="space-y-2 text-[13px]">
@@ -47,7 +45,7 @@ const Footer = () => {
                                 <li><Link href="/services/sap-services" className="hover:underline">SAP Services</Link></li>
                                 <li><Link href="/services/ai-ml" className="hover:underline">AI-ML</Link></li>
                                 <li><Link href="/services/sap-services" className="hover:underline">SAP Services</Link></li>
-                                <li><Link href="/services/cloud-services" role="menuitem" className="hover:underline">Cloud Services</Link></li>                                 
+                                <li><Link href="/services/cloud-services" role="menuitem" className="hover:underline">Cloud Services</Link></li>
                             </ul>
                         </div>
 
@@ -59,7 +57,14 @@ const Footer = () => {
                             <p className="text-sm">✉️ contact@ameya.com</p>
                             <div className="flex gap-4 mt-4">
                                 <a href="#" className=" hover:text-white transition">🌐</a>
-                                <a href="#" className="text-pink-100 hover:text-white transition">🐦</a>
+                                <a href="#" className="text-pink-100 hover:text-white transition">
+                                    <MyImage
+                                        src="/icons/linkedin.png"
+                                        alt="linkedin"
+                                        width="40"
+                                        height="40"
+                                    />
+                                </a>
                                 <a href="#" className="text-pink-100 hover:text-white transition">📘</a>
                                 <a href="#" className="text-pink-100 hover:text-white transition">📸</a>
                             </div>

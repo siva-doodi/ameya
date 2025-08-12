@@ -73,7 +73,7 @@ const AboutPage = () => {
                         className="p-8 rounded-2xl shadow-md bg-gradient-to-b from-yellow-50 to-white hover:shadow-xl transition"
                     />
                 </div>
-                <div className="bg-secondary-bg py-20">
+                {/* <div className="bg-secondary-bg py-20">
                     <div className="max-w-5xl mx-auto text-center">
                         <Text variant="h2">Our Journey</Text>
                         <div className="relative border-l-4 border-[#b72960] pl-6">
@@ -91,7 +91,78 @@ const AboutPage = () => {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
+                <div className="bg-white py-20">
+  <div className="max-w-7xl mx-auto px-6 lg:px-24 text-center">
+    <Text variant="h2" className="mb-16 text-primary-color font-extrabold tracking-wide">
+      What We Offer
+    </Text>
+    <div className="flex flex-wrap justify-center gap-16">
+      {[
+        { icon: "⚙️", title: "Custom Software", desc: "Tailored solutions crafted for your unique needs." },
+        { icon: "🔒", title: "Secure Architecture", desc: "Built with top security practices for your peace of mind." },
+        { icon: "🚀", title: "Fast Deployment", desc: "Quick launches to get you up and running fast." },
+        { icon: "🤝", title: "Dedicated Support", desc: "We’re with you 24/7 for smooth operation." },
+      ].map(({ icon, title, desc }) => (
+        <div
+          key={title}
+          className="flex flex-col items-center max-w-xs cursor-pointer group transition-transform duration-300 hover:scale-110"
+        >
+          <div className="text-7xl mb-4 text-primary-text group-hover:text-[#b72960] transition-colors">
+            {icon}
+          </div>
+          <h3 className="text-xl font-semibold mb-2 text-gray-900 group-hover:text-primary-text transition-colors">
+            {title}
+          </h3>
+          <p className="text-gray-600 text-center leading-relaxed">{desc}</p>
+          <div className="mt-3 h-1 w-16 bg-transparent group-hover:bg-primary-text rounded-full transition-colors"></div>
+        </div>
+      ))}
+    </div>
+  </div>
+</div>
+<section className="bg-primary-bg py-20 px-6 lg:px-24">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
+        
+        {/* Image side */}
+        <div className="lg:w-1/2 rounded-lg overflow-hidden shadow-lg">
+          <img
+            src="/images/about-team.jpg"
+            alt="Ameya Software Team"
+            className="w-full h-auto object-cover"
+            loading="lazy"
+          />
+        </div>
+        
+        {/* Text side */}
+        <div className="lg:w-1/2 text-gray-900">
+          <h2 className="text-4xl font-extrabold mb-6 text-primary-text">
+            About Ameya Software
+          </h2>
+          <p className="mb-6 text-lg leading-relaxed">
+            At Ameya Software, we are passionate about delivering innovative digital solutions that empower businesses to thrive. Our expert team combines creativity, technology, and dedication to bring your ideas to life.
+          </p>
+          <ul className="space-y-4">
+            {[
+              "Cutting-edge technology tailored to your needs",
+              "Reliable and transparent communication",
+              "Commitment to quality and customer success",
+              "Global reach with a personal touch",
+            ].map((point) => (
+              <li key={point} className="flex items-center gap-3 text-primary-text">
+                <span className="text-2xl">✔️</span> {point}
+              </li>
+            ))}
+          </ul>
+          <button
+            type="button"
+            className="mt-10 px-8 py-3 bg-primary-text text-white rounded-full font-semibold hover:bg-[#9f1d4d] transition"
+          >
+            Learn More
+          </button>
+        </div>
+      </div>
+    </section>
                 <div className="bg-gray-50 py-20">
                     <div className="max-w-7xl mx-auto px-6 lg:px-24 text-center">
                         <Text variant="h2">
