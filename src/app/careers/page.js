@@ -6,6 +6,7 @@ import Link from 'next/link';
 import MyImage from '../components/MyImage'
 import TextCard from "../components/common/TextCard";
 import RoundButton from "../components/common/RoundButton";
+import Button from "../components/common/Button";
 const JOBS = [
     {
         id: "fe-1",
@@ -43,7 +44,28 @@ const JOBS = [
         ],
     },
 ];
-
+const cultureData = [
+  {
+    title: "Flexible Work",
+    description: "Flexible hours, and supportive PTO policies that help you balance work and life.",
+    icon: "🕒",
+  },
+  {
+    title: "Innovation First",
+    description: "Opportunities to experiment with new ideas, cutting-edge tools, and emerging technologies without fear of failure.",
+    icon: "💡",
+  },
+  {
+    title: "Collaborative Environment",
+    description: "Open communication, team brainstorming sessions, and cross-functional projects to fuel creativity and problem-solving.",
+    icon: "🤝",
+  },
+  {
+    title: "Inclusive Culture",
+    description: "A respectful, diverse, and welcoming workplace where every voice is heard and valued.",
+    icon: "🌍",
+  },
+];
 export default function CareersPage() {
     const [applyJob, setApplyJob] = useState(null); // job object or null
     const [form, setForm] = useState({
@@ -100,34 +122,19 @@ export default function CareersPage() {
                         </p>
 
                         <div className="mt-8 flex flex-wrap gap-4">
-                            <a
-                                href="#open-roles"
-                                className="inline-flex items-center gap-3 bg-gradient-to-r from-[#f48fb1] to-[#b72960] text-white font-semibold px-6 py-3 rounded-full shadow-lg hover:scale-[1.02] transition"
-                            >
-                                View Open Roles
-                            </a>
+                            <div>
+                                <Link href="/contact">
+                                    <RoundButton
+                                    text="View Open Roles"
+                                />
+                                </Link>
+                            </div>
                             <a
                                 href="#culture"
                                 className="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-gray-200 text-gray-700 hover:shadow-sm transition"
                             >
                                 Our Culture
                             </a>
-                        </div>
-
-                        {/* quick stats */}
-                        <div className="mt-8 flex flex-wrap gap-6">
-                            <div className="bg-gray-50 border rounded-lg px-4 py-3">
-                                <div className="text-sm text-gray-500">Remote</div>
-                                <div className="font-semibold text-lg">Fully flexible</div>
-                            </div>
-                            <div className="bg-gray-50 border rounded-lg px-4 py-3">
-                                <div className="text-sm text-gray-500">Interview</div>
-                                <div className="font-semibold text-lg">Fast & transparent</div>
-                            </div>
-                            <div className="bg-gray-50 border rounded-lg px-4 py-3">
-                                <div className="text-sm text-gray-500">Benefits</div>
-                                <div className="font-semibold text-lg">Competitive</div>
-                            </div>
                         </div>
                     </div>
 
@@ -182,14 +189,6 @@ export default function CareersPage() {
                                 className="relative group bg-white border border-gray-100 rounded-2xl p-6 shadow-sm hover:shadow-lg transition"
                             >
                                 <div className="flex items-start gap-4">
-                                    <div
-                                        className="flex items-center justify-center w-12 h-12 rounded-full text-white font-bold"
-                                        style={{ background: "linear-gradient(135deg,#f48fb1,#b72960)" }}
-                                        aria-hidden
-                                    >
-                                        {job.team[0]}
-                                    </div>
-
                                     <div className="flex-1">
                                         <h3 className="text-lg font-semibold text-gray-900">
                                             {job.title}
@@ -213,23 +212,9 @@ export default function CareersPage() {
                                                 onClick={() => openApply(job)}
                                                 text="Apply"
                                             />
-
-
-                                            <a
-                                                href="#"
-                                                className="text-sm text-[#6b7280] hover:underline"
-                                                aria-label={`See details about ${job.title}`}
-                                            >
-                                                See details
-                                            </a>
                                         </div>
                                     </div>
-                                </div>
-
-                                {/* little tag */}
-                                <span className="absolute top-4 right-4 text-xs px-2 py-1 rounded-md bg-[#fdf2f8] text-[#b72960] border border-[#fde4ef]">
-                                    {job.team}
-                                </span>
+                                </div>                  
                             </article>
                         ))}
                     </div>

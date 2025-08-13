@@ -16,8 +16,6 @@ export default function Header() {
     // refs for outside-click detection
     const servicesRef = useRef(null);
     const mobileMenuRef = useRef(null);
-
-    // Scroll / shadow behaviour (same as before)
     useEffect(() => {
         if (pathname !== '/') {
             setIsScrolledDown(true);
@@ -28,8 +26,7 @@ export default function Header() {
         window.addEventListener('scroll', onScroll);
         return () => window.removeEventListener('scroll', onScroll);
     }, [pathname]);
-
-    // Close when clicking outside (desktop dropdown and mobile sublist)
+    
     useEffect(() => {
         function handlePointerDown(e) {
             const target = e.target;
@@ -64,7 +61,9 @@ export default function Header() {
         setIsMobileServicesOpen(false);
         setIsMobileMenuOpen(false);
     }, [pathname]);
+    const serviceLinks=[
 
+    ]
     return (
         <header
             className={`header fixed top-0 z-50 bg-white md:px-4 lg:px-24 w-full transition-shadow duration-300
@@ -100,21 +99,30 @@ export default function Header() {
                         <div
                             role="menu"
                             aria-label="Services"
-                            className={`absolute  text-sm bg-white text-secondary-text font-[500] p-2 left-0 top-full mt-2 w-56 rounded-md border border-gray-600 bg-white shadow-lg z-50 transform transition-all duration-150
-                ${isServicesOpen ? 'opacity-100 visible pointer-events-auto translate-y-0' : 'opacity-0 invisible pointer-events-none -translate-y-1'}`}
+                            className={`absolute text-sm bg-white text-gray-800 font-medium p-2 left-0 top-full mt-2 w-56 rounded-lg border border-gray-200 shadow-xl z-50 transform transition-all duration-200
+    ${isServicesOpen
+                                    ? 'opacity-100 visible pointer-events-auto translate-y-0'
+                                    : 'opacity-0 invisible pointer-events-none -translate-y-1'
+                                }`}
                         >
-                           <Link href="/services/web-development">Web Development</Link>
-<Link href="/services/app-development">App Development</Link>
-<Link href="/services/sap-services">SAP Services</Link>
-<Link href="/services/ai-ml">AI-ML</Link>
-<Link href="/services/cloud-services">Cloud Services</Link>
-
+                            {[
+                               
+                            ].map((item, index) => (
+                                <Link
+                                    key={index}
+                                    href={item.href}
+                                    role="menuitem"
+                                    className="block px-4 py-2 rounded-md hover:bg-gradient-to-r hover:from-pink-500 hover:to-purple-500 hover:text-white transition-colors duration-200"
+                                >
+                                    {item.label}
+                                </Link>
+                            ))}
                         </div>
+
                     </div>
 
                     <Link href="/about" className="hover:underline">About</Link>
                     <Link href="/careers" className="hover:underline">Careers</Link>
-
                     <Link
                         href="/contact"
                         className="text-sm ml-4 inline-block bg-primary-text  text-white px-6 py-2 rounded-full shadow-md transition duration-300 ease-in-out transform hover:scale-105"

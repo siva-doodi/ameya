@@ -5,17 +5,17 @@ import Image from 'next/image';
 import RoundButton from "../common/RoundButton";
 import MyImage from "../MyImage";
 import Text from '../common/Text';
-import { Lightbulb, Wrench, Target, Rocket,Vibrate,Server,BrainCircuit } from "lucide-react";
+import { Lightbulb, Wrench, Target, Rocket, Vibrate, Server, BrainCircuit } from "lucide-react";
 import { FaGlobe, FaMobileAlt, FaServer, FaCloud, FaRobot, FaDatabase } from "react-icons/fa";
 const AiServiceSection = () => {
     const listOfServices = [
-  { id: 1, icon: <FaGlobe  size={25}/>, name: "Web Development", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500" },
-  { id: 2, icon: <Vibrate size={30}/>, name: "App Development", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500" },
-  { id: 3, icon: <Server  size={25}/>, name: "SAP Services", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500" },
-  { id: 4, icon: <FaCloud size={25}/>, name: "Cloud Services", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500" },
-  { id: 5, icon:  <BrainCircuit size={25}/>, name: "AI-ML", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500" },
-  { id: 6, icon: <FaDatabase size={25}/>, name: "Data Science", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500" }
-];
+        { id: 1, icon: <FaGlobe size={25} />, name: "Web Technologies", description: "Engineering digital excellence through cutting-edge web technologies that transform your vision into powerful, scalable online experiences." },
+        { id: 2, icon: <Vibrate size={30} />, name: "Application Development ", description: "Crafting intelligent applications that streamline operations, boost productivity, and deliver competitive advantages through innovative software solutions" },
+        { id: 3, icon: <BrainCircuit size={25} />, name: "AI (Artificial Intelligence) ", description: "Unlocking business potential with advanced AI solutions that automate processes, predict trends, and drive intelligent decision-making across your enterprise." },
+        { id: 4, icon: <FaCloud size={25} />, name: "Cloud Services", description: "Accelerating digital transformation with secure, scalable cloud infrastructure that reduces costs while enhancing agility and operational excellence" },
+        { id: 5, icon: <Server size={25} />, name: "SAP (CPI, ABAP, MM) ", description: "Optimizing enterprise performance through expert SAP implementations, integrations, and customizations that maximize your business intelligence and efficiency." },
+        { id: 6, icon: <FaDatabase size={25} />, name: "Data Science", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500" }
+    ];
 
     return (
         <>
@@ -49,10 +49,13 @@ const AiServiceSection = () => {
                 {/* Text Content */}
                 <div className="lg:w-1/2 md:text-center lg:text-left">
                     <Text variant="h2">What We Do</Text>
-                    <Text variant="p" className="mb-4">We deliver cutting-edge software solutions tailored to your business needs.
-                        From concept to deployment, our team ensures innovation, quality, and
-                        performance in every project. Let’s turn your ideas into impactful
-                        digital products that drive results.</Text>
+                    <Text variant="p" className="mb-4">Creative Ideas, Innovative Tools, Exceptional Results 
+
+At Ameya IT Solutions, we transform business challenges into opportunities through creative thinking and innovative technology solutions. We specialize in developing custom software applications, implementing cutting-edge web technologies, and creating intelligent automation systems that streamline operations and drive growth. 
+
+Our approach combines strategic thinking with technical excellence to deliver solutions that not only solve immediate problems but also create long-term competitive advantages. We leverage the latest tools and methodologies including AI and machine learning, cloud computing, and advanced development frameworks to build robust, scalable solutions that evolve with your business. 
+
+Our core capabilities include: </Text>
                     <RoundButton
                         text="Read More"
                     />
@@ -75,7 +78,7 @@ const AiServiceSection = () => {
                     </div>
                     <div className="flex  justify-center gap-4 p-6 h-[210px] border border-gray-200 rounded-sm  hover:shadow-lg transition">
                         <div className="flex-shrink-0 rounded-full bg-[#b72960] w-12 h-12 flex justify-center items-center text-white text-lg">
-                           <Wrench size={28} />
+                            <Wrench size={28} />
                         </div>
                         <div>
                             <Text variant="h5">Innovative Tools</Text>
@@ -99,7 +102,7 @@ const AiServiceSection = () => {
                     </div>
                     <div className="flex  justify-center gap-4 p-6 h-[210px] border border-gray-200 rounded-sm  hover:shadow-lg transition">
                         <div className="flex-shrink-0 rounded-full bg-[#b72960] w-12 h-12 flex justify-center items-center text-white text-lg">
-                            
+
                             <Rocket size={28} />
                         </div>
                         <div>

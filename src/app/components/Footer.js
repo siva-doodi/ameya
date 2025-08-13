@@ -4,6 +4,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Text from "./common/Text";
 import MyImage from "./MyImage";
+import { FaLinkedin, FaInstagram, FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+import { FaXTwitter } from "react-icons/fa6";
 const Footer = () => {
     return (
         <>
@@ -52,23 +55,41 @@ const Footer = () => {
                         {/* Contact */}
                         <div>
                             <h3 className="font-semibold text-lg mb-4">Contact Us</h3>
-                            <p className=" text-sm">📍 123 Software Street, Tech City</p>
-                            <p className=" text-sm">📞 +1 234 567 890</p>
-                            <p className="text-sm">✉️ contact@ameya.com</p>
-                            <div className="flex gap-4 mt-4">
-                                <a href="#" className=" hover:text-white transition">🌐</a>
-                                <a href="#" className="text-pink-100 hover:text-white transition">
-                                    <MyImage
-                                        src="/icons/linkedin.png"
-                                        alt="linkedin"
-                                        width="40"
-                                        height="40"
-                                    />
-                                </a>
-                                <a href="#" className="text-pink-100 hover:text-white transition">📘</a>
-                                <a href="#" className="text-pink-100 hover:text-white transition">📸</a>
+
+                            {/* Address */}
+                            <div className="flex items-center gap-2">
+                                <FaMapMarkerAlt size={30}/>
+                                <Link
+                                    href="https://www.google.com/maps?q=37/A,+Susheela+Sadan,+Vengal+Rao+Nagar,+Hyderabad,+Telangana+500038"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center gap-2 text-sm text-white hover:underline"
+                                >
+
+                                    37/A, Susheela Sadan, Vengal Rao Nagar, Hyderabad, Telangana 500038
+                                </Link>
+
+                            </div>
+                            {/* Phone */}
+                            <div className="flex items-center gap-2 text-sm mt-2">
+                                <FaPhoneAlt size={18}/>
+                                +1 234 567 890
+                            </div>
+
+                            {/* Email */}
+                            <div className="flex items-center gap-2 text-sm mt-2">
+                                <MdEmail size={18}/>
+                                contact@ameya.com
+                            </div>
+
+                            {/* Social Icons */}
+                            <div className="flex gap-4 mt-4 text-2xl text-primary-bg  transition-colors">
+                                <FaLinkedin className="cursor-pointer " />
+                                <FaXTwitter className="cursor-pointer" />
+                                <FaInstagram className="cursor-pointer" />
                             </div>
                         </div>
+
                     </div>
 
                     {/* Bottom Bar */}

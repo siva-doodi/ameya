@@ -25,7 +25,7 @@ export default function ContactSection() {
             <div className="bg-gray-50 p-8 flex flex-col justify-center">
               <h2 className="text-3xl font-bold text-primary-text mb-4">Get in Touch</h2>
               <Text variant='p'>
-                We’d love to hear from you! Whether you have a question, feedback, or just want to say hello, our team is ready to help.
+                We’re always happy to connect! Whether you’re seeking answers, sharing feedback, or simply reaching out, our team is here to assist you
               </Text>
               <ul className="space-y-3 text-gray-700 mt-6">
                 <li>📍 123 Main Street, Hyderabad, India</li>
