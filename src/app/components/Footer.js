@@ -40,7 +40,7 @@ const Footer = () => {
                         <div>
                             <h3 className="font-semibold text-lg mb-4">Services</h3>
                             <ul className="space-y-2 text-[13px]">
-                                <li><Link href="/services/web-development" className="hover:underline">Web Development</Link></li>
+                                <li><Link href="/services/web-technologies" className="hover:underline">Web Development</Link></li>
                                 <li><Link href="/services/app-development" className="hover:underline">App Development</Link></li>
                                 <li><Link href="/services/web-development" className="hover:underline">Web Development</Link></li>
                                 <li><Link href="/services/sap-services" className="hover:underline">SAP Services</Link></li>

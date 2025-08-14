@@ -99,20 +99,19 @@ export default function Header() {
                         <div
                             role="menu"
                             aria-label="Services"
-                            className={`absolute text-sm bg-white text-gray-800 font-medium p-2 left-[-60px] top-full mt-2 w-56 rounded-lg border border-gray-200 shadow-xl z-50 transform transition-all duration-200
+                            className={`absolute text-sm bg-white text-gray-800 font-medium p-2 left-[-60px] top-full mt-2 w-58 rounded-lg border border-gray-200 shadow-xl z-50 transform transition-all duration-200
     ${isServicesOpen
                                     ? 'opacity-100 visible pointer-events-auto translate-y-0'
                                     : 'opacity-0 invisible pointer-events-none -translate-y-1'
                                 }`}
                         >
-                            <ul className="space-y-2 text-[13px] text-5xl flex flex-col gap-2  p-4">
-                                <li><Link href="/services/web-development" className="hover:underline hover:text-primary-text">Web Development</Link></li>
-                                <li><Link href="/services/app-development" className="hover:underline hover:text-primary-text">App Development</Link></li>
-                                <li><Link href="/services/web-development" className="hover:underline hover:text-primary-text">Web Development</Link></li>
+                            <ul className="space-y-2 text-[16px] text-5xl flex flex-col gap-2  p-4">
+                                <li><Link href="/services/web-technologies" className="hover:underline hover:text-primary-text">Web Technologies</Link></li>
+                                <li><Link href="/services/application-development" className="hover:underline hover:text-primary-text">Application-Development</Link></li>
+                                <li><Link href="/services/artificial-intelligence" className="hover:underline hover:text-primary-text">Artificial Intelligence</Link></li>
+                                <li><Link href="/services/cloud-services" className="hover:underline hover:text-primary-text">Cloud Services</Link></li>
                                 <li><Link href="/services/sap-services" className="hover:underline hover:text-primary-text">SAP Services</Link></li>
-                                <li><Link href="/services/ai-ml" className="hover:underline hover:text-primary-text">AI-ML</Link></li>
-                                <li><Link href="/services/sap-services" className="hover:underline hover:text-primary-text">SAP Services</Link></li>
-                                <li><Link href="/services/cloud-services" role="menuitem" className="hover:underline hover:text-primary-text">Cloud Services</Link></li>
+                                <li><Link href="/services/data-science" role="menuitem" className="hover:underline hover:text-primary-text">Data Science</Link></li>
                             </ul>
 
                         </div>
