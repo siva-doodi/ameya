@@ -181,7 +181,7 @@ We innovate to solve problems and empower clients in a connected future.
             {/* Image side */}
             <div className="lg:w-1/2 rounded-lg overflow-hidden shadow-lg">
               <img
-                src="/images/about-team.jpg"
+                src="/images/Work_4.jpg"
                 alt="Ameya Software Team"
                 className="w-full h-auto object-cover"
                 loading="lazy"
@@ -191,7 +191,7 @@ We innovate to solve problems and empower clients in a connected future.
             {/* Text side */}
             <div className="lg:w-1/2 text-gray-900">
               <h2 className="text-4xl font-extrabold mb-6 text-primary-text">
-                About Ameya Software
+                About US
               </h2>
               <p className="mb-6 text-lg leading-relaxed">
                 At Ameya Software, we are passionate about delivering innovative digital solutions that empower businesses to thrive. Our expert team combines creativity, technology, and dedication to bring your ideas to life.
@@ -208,49 +208,21 @@ We innovate to solve problems and empower clients in a connected future.
                   </li>
                 ))}
               </ul>
-              <button
-                type="button"
-                className="mt-10 px-8 py-3 bg-primary-text text-white rounded-full font-semibold hover:bg-[#9f1d4d] transition"
-              >
-                Learn More
-              </button>
             </div>
           </div>
         </section>
-        <section className="bg-white py-20 px-6 md:px-18">
+        <section className="lg:px-20 py-20 bg-secondary-bg">
           <div className="max-w-7xl mx-auto text-center mb-16">
             <h2 className="text-4xl font-extrabold text-gray-900 mb-4">Our Culture</h2>
             <p className="text-gray-700 text-lg max-w-2xl mx-auto">
               At Ameya IT Solutions, we blend creativity, technology, and teamwork. We believe in ownership, curiosity, and continuous growth — building solutions we’re proud of and results that matter.
             </p>
           </div>
-
-          {/* <div className="shadow-lg p-2">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 max-w-7xl mx-auto ">
-              {cultureData.map((item, index) => (
-                <div key={index} className="text-center space-y-4">
-                  <div className="flex justify-center">
-                    <MyImage
-                      src={item.icon}
-                      alt={item.title}
-                      width={80}
-                      height={80}
-                      className="object-contain"
-                    />
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-900">{item.title}</h3>
-                  <p className="text-gray-600 text-base">{item.description}</p>
-                </div>
-              ))}
-            </div>
-          </div> */}
-        </section>
-        <section className="lg:px-20 py-20 bg-secondary-bg">
           <div className="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between gap-10 shadow-lg lg:p-6 rounded-lg bg-white">
             {cultureData.map((item, index) => (
               <div key={index} className="flex flex-col items-center text-center gap-2 p-4">
-                
-                <MyImage 
+
+                <MyImage
                   src={item.icon}
                   alt="icon-1"
                   width="50"
@@ -265,11 +237,10 @@ We innovate to solve problems and empower clients in a connected future.
         <div className="bg-gray-50 py-20">
           <div className="max-w-7xl mx-auto px-6 lg:px-24 text-center">
             <Text variant="h2">
-              Why Choose Ameya Software?
+              Why Choose Ameya?
             </Text>
             <Text variant="p">
-              At Ameya Software, we combine innovation, expertise, and passion to deliver
-              solutions that help businesses thrive in the digital era.
+              Innovation Meets Reliability - Your Strategic Advantage 
             </Text>
             <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
               {

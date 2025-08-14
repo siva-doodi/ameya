@@ -49,13 +49,7 @@ const AiServiceSection = () => {
                 {/* Text Content */}
                 <div className="lg:w-1/2 md:text-center lg:text-left">
                     <Text variant="h2">What We Do</Text>
-                    <Text variant="p" className="mb-4">Creative Ideas, Innovative Tools, Exceptional Results 
-
-At Ameya IT Solutions, we transform business challenges into opportunities through creative thinking and innovative technology solutions. We specialize in developing custom software applications, implementing cutting-edge web technologies, and creating intelligent automation systems that streamline operations and drive growth. 
-
-Our approach combines strategic thinking with technical excellence to deliver solutions that not only solve immediate problems but also create long-term competitive advantages. We leverage the latest tools and methodologies including AI and machine learning, cloud computing, and advanced development frameworks to build robust, scalable solutions that evolve with your business. 
-
-Our core capabilities include: </Text>
+                    <Text variant="p" className="mb-4">At Ameya IT Solutions, we turn business challenges into opportunities using innovative technology. We specialize in developing custom software, implementing modern web solutions, and creating intelligent automation systems that streamline operations and drive growth.</Text>
                     <RoundButton
                         text="Read More"
                     />

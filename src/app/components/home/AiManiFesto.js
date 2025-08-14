@@ -9,13 +9,16 @@ const AiManiFesto = () => {
         <>
             <section className="px-4 md:px-24 py-12 bg-[#608BC1] text-white">
                 <div className="md:w-[80%] m-auto">
-                    <div className="md:w-[45%] md:m-auto">                      
-                        <div className="md:text-center text-2xl border-b-2 rounded border-[#0f1941] p-2 font-bold mb-4">OverView: Ameyait Solutions</div>
+                    <div className="md:w-[45%] md:m-auto">
+                        <div className="md:text-center text-2xl border-b-2 rounded border-[#0f1941] p-2 font-bold mb-4">
+                            Overview: Ameya IT Solutions
+                        </div>
                     </div>
-                    <Text variant="span">Apex Cura’s Agentic SaaS platform is designed to improve hospital revenue outcomes by
-                        deploying specialized AI Agents across departments. The Operations Agent automates call-center workflows, enquiry handling and patient chat support — uncovering new revenue opportunities and boosting conversion rates. The Medical Agent acts as a virtual specialty assistant, ensuring precise, efficient digital documentation for clinicians. AI Agents coordinate seamlessly to streamline operations, deepen patient engagement,
-                        and accelerate your revenue cycle through intelligent, revenue-focused automation.</Text>                  
+                    <Text variant="span">
+                        At Ameya IT Solutions, we deliver intelligent software solutions that empower businesses to streamline operations, enhance user experiences, and drive growth. Our team leverages advanced technologies, including AI, cloud computing, and enterprise software platforms, to create custom applications, automate workflows, and optimize business processes. From ideation to implementation, we focus on innovation, reliability, and measurable results, helping organizations achieve operational excellence and maximize their technology investments.
+                    </Text>
                 </div>
+
             </section>
             <section className="px-4 md:px-24 mt-20">
                 {/* Section 1 */}
@@ -30,39 +33,33 @@ const AiManiFesto = () => {
                     </div>
                     <div className="w-full md:w-[50%]">
                         <Text variant="h3" className="text-[2rem] text-primary-text font-bold mb-4">
-                            Customer analytics{" "}
+                            Intelligent Insights{" "}
                             <span className="text-[#5D5D5D] font-[300]">
-                                to improve business processes
+                                to optimize your business operations
                             </span>
                         </Text>
                         <Text variant="p" className="text-justify mb-4">
-                            Understand your Customers from the holistic data known to your organization
-                            rather than fragmented analytics. Pooling all the data at a common place
-                            & building Unified Customer View (UCV) will drive insightful Customer Analytics
-                            & enhance Customer Experience at multiple touch points. Satisfied customers build
-                            great companies.
+                            Leverage your organization's data effectively to make smarter decisions. By integrating and analyzing all key information in one place, we create a unified view that empowers your business with actionable insights. Enhance efficiency, improve customer experiences, and drive growth with data-driven strategies designed for success.
                         </Text>
-                        <Button text="Click Me" />
+                        <Button text="Learn More" />
                     </div>
+
                 </div>
                 <div className="flex flex-col md:flex-row justify-center items-center gap-4 mt-20">
                     <div className="w-full md:w-[50%] order-2 md:order-1">
                         <Text variant="h3">
-                            Customer analytics{" "}
+                            Business Intelligence{" "}
                             <span className="text-[#5D5D5D] font-[300]">
-                                to improve business processes
+                                to optimize your operations
                             </span>
                         </Text>
-                        <p className="text-[#5D5D5D] text-justify mb-4">
-                            Understand your Customers from the holistic data known to your organization
-                            rather than fragmented analytics. Pooling all the data at a common place
-                            & building Unified Customer View (UCV) will drive insightful Customer Analytics
-                            & enhance Customer Experience at multiple touch points. Satisfied customers build
-                            great companies.
-                        </p>
+                        <Text variant="p" className="text-justify mb-4">
+                            Harness the power of your organization’s data to make smarter, faster decisions. By consolidating information into a unified platform, we provide actionable insights that streamline processes, enhance operational efficiency, and improve customer satisfaction across all touchpoints. Data-driven strategies pave the way for sustained growth and innovation.
+                        </Text>
+
                         <Button text="Click Me" />
                     </div>
-                    <div className="w-full md:w-[50%] order-1 md:order-2">
+                    <div className="w-full md:w-[50%] order-1 md:order-2 ">
                         <MyImage
                             src="/images/herosection2.jpg"
                             alt="Next.js Logo"

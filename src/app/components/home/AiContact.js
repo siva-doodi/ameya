@@ -1,5 +1,6 @@
 import React from "react";
 import Text from '../common/Text'
+import Link from 'next/link';
 const AiContact = () => {
     return (
         <>
@@ -13,7 +14,14 @@ const AiContact = () => {
                         </Text>                    
                         <div className="space-y-4 mt-6">
                             <p className="flex items-center gap-3">
-                                📍 <Text variant="span">123 Software Street, Tech City, India</Text>
+                                📍 <Link
+                                    href="https://www.google.com/maps?q=37/A,+Susheela+Sadan,+Vengal+Rao+Nagar,+Hyderabad,+Telangana+500038"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center gap-2 text-sm text-white hover:underline"
+                                >
+                                    37/A, Susheela Sadan, Vengal Rao Nagar, Hyderabad, Telangana 500038
+                                </Link>
                             </p>
                             <p className="flex items-center gap-3">
                                 📞 <Text variant="span">+91 98765 43210</Text>

@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
 import Text from '../components/common/Text'
+import Link from 'next/link';
 export default function ContactSection() {
   const [formData, setFormData] = useState({
     name: '',
@@ -28,7 +29,14 @@ export default function ContactSection() {
                 We’re always happy to connect! Whether you’re seeking answers, sharing feedback, or simply reaching out, our team is here to assist you
               </Text>
               <ul className="space-y-3 text-gray-700 mt-6">
-                <li>📍 123 Main Street, Hyderabad, India</li>
+                <li>📍  <Link
+                  href="https://www.google.com/maps?q=37/A,+Susheela+Sadan,+Vengal+Rao+Nagar,+Hyderabad,+Telangana+500038"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-sm hover:underline"
+                >
+                  37/A, Susheela Sadan, Vengal Rao Nagar, Hyderabad, Telangana 500038
+                </Link></li>
                 <li>📧 contact@example.com</li>
                 <li>📞 +91 98765 43210</li>
               </ul>
@@ -66,7 +74,7 @@ export default function ContactSection() {
                 ></textarea>
                 <button
                   type="submit"
-                  className="w-full bg-[#b72960] hover:bg-[#a21c4b] text-white py-3 rounded-lg font-semibold shadow-md cursor-pointer transition-transform transform hover:scale-105"
+                  className="w-full bg-primary-text rounded-sm  text-white py-3  font-semibold shadow-md cursor-pointer transition-transform transform hover:scale-105"
                 >
                   Send Message 🚀
                 </button>

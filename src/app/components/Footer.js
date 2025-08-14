@@ -13,8 +13,6 @@ const Footer = () => {
             <footer className="bg-gray-600 text-white py-12">
                 <div className="max-w-7xl mx-auto px-6 lg:px-12">
                     <div className="grid gap-10 md:grid-cols-4">
-
-                        {/* Logo & About */}
                         <div>
                             <Link href="/">
                                 <MyImage
@@ -65,7 +63,6 @@ const Footer = () => {
                                     rel="noopener noreferrer"
                                     className="flex items-center gap-2 text-sm text-white hover:underline"
                                 >
-
                                     37/A, Susheela Sadan, Vengal Rao Nagar, Hyderabad, Telangana 500038
                                 </Link>
 
@@ -86,7 +83,6 @@ const Footer = () => {
                             <div className="flex gap-4 mt-4 text-2xl text-primary-bg  transition-colors">
                                 <FaLinkedin className="cursor-pointer " />
                                 <FaXTwitter className="cursor-pointer" />
-                                <FaInstagram className="cursor-pointer" />
                             </div>
                         </div>
 
