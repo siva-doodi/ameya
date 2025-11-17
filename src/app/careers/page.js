@@ -45,6 +45,7 @@ const JOBS = [
     },
 ];
 const cultureData = [
+<<<<<<< HEAD
   {
     title: "Flexible Work",
     description: "Flexible hours, and supportive PTO policies that help you balance work and life.",
@@ -65,6 +66,28 @@ const cultureData = [
     description: "A respectful, diverse, and welcoming workplace where every voice is heard and valued.",
     icon: "🌍",
   },
+=======
+    {
+        title: "Flexible Work",
+        description: "Flexible hours, and supportive PTO policies that help you balance work and life.",
+        icon: "🕒",
+    },
+    {
+        title: "Innovation First",
+        description: "Opportunities to experiment with new ideas, cutting-edge tools, and emerging technologies without fear of failure.",
+        icon: "💡",
+    },
+    {
+        title: "Collaborative Environment",
+        description: "Open communication, team brainstorming sessions, and cross-functional projects to fuel creativity and problem-solving.",
+        icon: "🤝",
+    },
+    {
+        title: "Inclusive Culture",
+        description: "A respectful, diverse, and welcoming workplace where every voice is heard and valued.",
+        icon: "🌍",
+    },
+>>>>>>> 2c62707 (Updated project code)
 ];
 export default function CareersPage() {
     const [applyJob, setApplyJob] = useState(null); // job object or null
@@ -109,7 +132,11 @@ export default function CareersPage() {
             <section
                 className="relative overflow-hidden py-20"
                 aria-labelledby="careers-heading"
+<<<<<<< HEAD
             >
+=======
+                >
+>>>>>>> 2c62707 (Updated project code)
                 <div className="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col lg:flex-row items-center gap-10">
                     <div className="lg:w-1/2">
                         <h1 className="text-4xl lg:text-5xl font-bold mt-8 mb-4">
@@ -125,8 +152,13 @@ export default function CareersPage() {
                             <div>
                                 <Link href="/contact">
                                     <RoundButton
+<<<<<<< HEAD
                                     text="View Open Roles"
                                 />
+=======
+                                        text="View Open Roles"
+                                    />
+>>>>>>> 2c62707 (Updated project code)
                                 </Link>
                             </div>
                             <a
@@ -148,7 +180,11 @@ export default function CareersPage() {
 
                 </div>
             </section>
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 2c62707 (Updated project code)
             {/* BENEFITS / WHY JOIN */}
             <section id="culture" className=" py-16 bg-white">
                 <div className="max-w-7xl mx-auto px-6 lg:px-12">
@@ -207,14 +243,22 @@ export default function CareersPage() {
                                         </ul>
 
                                         <div className="mt-5 flex items-center gap-3">
+<<<<<<< HEAD
                                             
+=======
+
+>>>>>>> 2c62707 (Updated project code)
                                             <RoundButton
                                                 onClick={() => openApply(job)}
                                                 text="Apply"
                                             />
                                         </div>
                                     </div>
+<<<<<<< HEAD
                                 </div>                  
+=======
+                                </div>
+>>>>>>> 2c62707 (Updated project code)
                             </article>
                         ))}
                     </div>
@@ -265,7 +309,11 @@ export default function CareersPage() {
 
             {/* Footer-like small */}
             <footer className="py-10 text-center text-sm text-gray-500">
+<<<<<<< HEAD
                 © {new Date().getFullYear()} YourCompany • Built with ❤️
+=======
+                © {new Date().getFullYear()} Ameyait • Built with ❤️
+>>>>>>> 2c62707 (Updated project code)
             </footer>
 
             {/* APPLY DRAWER / MODAL */}

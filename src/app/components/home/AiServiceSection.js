@@ -19,7 +19,7 @@ const AiServiceSection = () => {
 
     return (
         <>
-            <section className="mt-20 px-4 md:px-24 py-12 bg-sky-600 text-white">
+            {/* <section className="mt-20 px-4 md:px-24 py-12 bg-sky-600 text-white">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     {listOfServices.map((item) => (
                         <div className="flex flex-col gap-2" key={item.id}>
@@ -42,7 +42,7 @@ const AiServiceSection = () => {
                         </div>
                     ))}
                 </div>
-            </section>
+            </section> */}
 
             <section className="flex flex-col lg:flex-row md:justify-center items-center gap-12 lg:gap-20 px-6 lg:px-24 py-20 bg-white">
 
