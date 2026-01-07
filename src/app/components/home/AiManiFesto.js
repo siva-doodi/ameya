@@ -9,12 +9,12 @@ export default function AiManiFesto() {
             {/* OVERVIEW */}
             <section className="px-6 md:px-24 py-20 bg-[#608BC1] text-white">
                 <div className="max-w-5xl mx-auto text-center">
-                    <h2 className="text-2xl md:text-3xl font-bold border-b-2 border-[#0f1941] inline-block pb-2 mb-6">
+                    <h2 className="text-2xl md:text-3xl font-bold  inline-block pb-2 mb-6">
                         Overview: Ameya IT Solutions
                     </h2>
 
-                    <Text variant="p" className="text-lg leading-relaxed">
-                        At Ameya IT Solutions, we deliver intelligent software solutions...
+                    <Text variant="p" className="text-lg leading-relaxed text-white">
+                        At Ameya IT Solutions, we deliver intelligent software solutions that empower businesses to streamline operations, enhance user experiences, and drive growth. Our team leverages advanced technologies, including AI, cloud computing, and enterprise software platforms, to create custom applications, automate workflows, and optimize business processes. From ideation to implementation, we focus on innovation, reliability, and measurable results, helping organizations achieve operational excellence and maximize their technology investments.
                     </Text>
                 </div>
             </section>
@@ -40,10 +40,8 @@ export default function AiManiFesto() {
                         </Text>
 
                         <Text variant="p" className="text-justify mb-6">
-                            Leverage your organization’s data to make smarter decisions...
-                        </Text>
-
-                        <Button text="Learn More" />
+                            Leverage your organization's data effectively to make smarter decisions. By integrating and analyzing all key information in one place, we create a unified view that empowers your business with actionable insights. Enhance efficiency, improve customer experiences, and drive growth with data-driven strategies designed for success.
+                        </Text>                  
                     </div>
                 </div>
             </section>
@@ -67,10 +65,10 @@ export default function AiManiFesto() {
                         </Text>
 
                         <Text variant="p" className="text-justify mb-6">
-                            Harness the power of your organization’s data...
+                            Harness the power of your organization’s data to make smarter, faster decisions. By consolidating information into a unified platform, we provide actionable insights that streamline processes, enhance operational efficiency, and improve customer satisfaction across all touchpoints. Data-driven strategies pave the way for sustained growth and innovation.
                         </Text>
 
-                        <Button text="Click Me" />
+                        
                     </div>
 
                     <MyImage

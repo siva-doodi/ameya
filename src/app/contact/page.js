@@ -30,15 +30,16 @@ export default function ContactSection() {
               </Text>
               <ul className="space-y-3 text-gray-700 mt-6">
                 <li>📍  <Link
-                  href="https://www.google.com/maps?q=37/A,+Susheela+Sadan,+Vengal+Rao+Nagar,+Hyderabad,+Telangana+500038"
+                  href="https://www.google.com/maps?q=3rd+floor,+Plot+No.+37/A,+Vengal+Rao+Nagar,+Sunder+Nagar,+Hyderabad,+Telangana+500038"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-sm hover:underline"
                 >
-                  37/A, Susheela Sadan, Vengal Rao Nagar, Hyderabad, Telangana 500038
+                  3rd floor, Plot No. 37/A, Vengal Rao Nagar, Sunder Nagar,
+                Hyderabad, Telangana 500038
                 </Link></li>
-                <li>📧 contact@example.com</li>
-                <li>📞 +91 98765 43210</li>
+                <li>📧 info@ameyait.com</li>
+                <li>📞 +91 7993174833</li>
               </ul>
             </div>
 

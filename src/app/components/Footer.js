@@ -39,10 +39,9 @@ const Footer = () => {
                         </div>
                         <div>
                             <h3 className="font-semibold text-lg mb-4">Services</h3>
-                            <ul className="space-y-2 text-[13px]">
+                            <ul className="space-y-2 ">
                                 <li><Link href="/services/web-technologies" className="hover:underline">Web Development</Link></li>
                                 <li><Link href="/services/app-development" className="hover:underline">App Development</Link></li>
-                                <li><Link href="/services/web-development" className="hover:underline">Web Development</Link></li>
                                 <li><Link href="/services/sap-services" className="hover:underline">SAP Services</Link></li>
                                 <li><Link href="/services/ai-ml" className="hover:underline">AI-ML</Link></li>
                                 <li><Link href="/services/sap-services" className="hover:underline">SAP Services</Link></li>
@@ -53,48 +52,62 @@ const Footer = () => {
                         {/* Contact */}
                         <div>
                             <h3 className="font-semibold text-lg mb-4">Contact Us</h3>
-
                             {/* Address */}
                             <div className="flex items-center gap-2">
-                                <FaMapMarkerAlt size={30}/>
+                                <FaMapMarkerAlt size={30} />
                                 <Link
-                                    href="https://www.google.com/maps?q=37/A,+Susheela+Sadan,+Vengal+Rao+Nagar,+Hyderabad,+Telangana+500038"
+                                    href="https://www.google.com/maps?q=3rd+floor,+Plot+No.+37/A,+Vengal+Rao+Nagar,+Sunder+Nagar,+Hyderabad,+Telangana+500038"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="flex items-center gap-2 text-sm text-white hover:underline"
                                 >
-                                    37/A, Susheela Sadan, Vengal Rao Nagar, Hyderabad, Telangana 500038
+                                    3rd floor, Plot No. 37/A, Vengal Rao Nagar, Sunder Nagar,
+                                    Hyderabad, Telangana 500038
                                 </Link>
-
                             </div>
                             {/* Phone */}
                             <div className="flex items-center gap-2 text-sm mt-2">
-                                <FaPhoneAlt size={18}/>
-                                +1 234 567 890
+                                <FaPhoneAlt size={18} />
+                                +91 7993174833
                             </div>
-
                             {/* Email */}
                             <div className="flex items-center gap-2 text-sm mt-2">
-                                <MdEmail size={18}/>
-                                contact@ameya.com
+                                <MdEmail size={18} />
+                                info@ameyait.com
                             </div>
-
                             {/* Social Icons */}
-                            <div className="flex gap-4 mt-4 text-2xl text-primary-bg  transition-colors">
-                                <FaLinkedin className="cursor-pointer " />
-                                <FaXTwitter className="cursor-pointer" />
+                            <div className="flex gap-4 mt-5">
+                                <a
+                                    href="https://www.linkedin.com"
+                                    target="_blank"
+                                    className="w-9 h-9 flex items-center justify-center rounded-full bg-white/20 hover:bg-white hover:text-gray-700 transition"
+                                >
+                                    <FaLinkedin size={18} />
+                                </a>
+
+                                <a
+                                    href="https://x.com"
+                                    target="_blank"
+                                    className="w-9 h-9 flex items-center justify-center rounded-full bg-white/20 hover:bg-white hover:text-gray-700 transition"
+                                >
+                                    <FaXTwitter size={18} />
+                                </a>
+
+                                <a
+                                    href="https://instagram.com"
+                                    target="_blank"
+                                    className="w-9 h-9 flex items-center justify-center rounded-full bg-white/20 hover:bg-white hover:text-gray-700 transition"
+                                >
+                                    <FaInstagram size={18} />
+                                </a>
                             </div>
                         </div>
-
                     </div>
-
-                    {/* Bottom Bar */}
                     <div className="border-t border-primary-bg mt-10 pt-6 text-center  text-sm">
                         © {new Date().getFullYear()} Ameya Software. All Rights Reserved.
                     </div>
                 </div>
             </footer>
-
         </>
     )
 }

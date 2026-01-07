@@ -1,263 +1,243 @@
 "use client";
+
+/* ===================== Imports ===================== */
 import Link from "next/link";
-import { FaLaptopCode, FaMobileAlt, FaCloud, FaPalette, FaRocket, FaRobot, FaCheckCircle, FaStar, FaHandshake, FaTrophy } from 'react-icons/fa';
+import Text from "../components/common/Text";
 
+import {
+  FaLaptopCode,
+  FaMobileAlt,
+  FaCloud,
+  FaPalette,
+  FaRocket,
+  FaRobot,
+  FaShoppingCart,
+  FaUniversity,
+  FaTruck,
+  FaHeartbeat,
+  FaUsers,
+  FaIndustry,
+} from "react-icons/fa";
+
+import {
+  Lightbulb,
+  ShieldCheck,
+  Zap,
+  Globe,
+} from "lucide-react";
+
+/* ===================== Theme Colors ===================== */
+const COLORS = {
+  primaryText: "var(--color-primary-text)",
+  secondaryText: "var(--color-secondary-text)",
+  primaryBg: "var(--color-primary-bg)",
+  secondaryBg: "var(--color-secondary-bg)",
+  tertiaryBg: "var(--color-tertiary-bg)",
+  white: "var(--background)",
+};
+
+/* ===================== Static Data ===================== */
+const WHY_CHOOSE_US = [
+  {
+    icon: <Lightbulb size={24} className="text-white" />,
+    title: "Innovative Solutions",
+    desc: "We leverage emerging technologies to deliver cutting-edge solutions aligned with industry best practices.",
+  },
+  {
+    icon: <ShieldCheck size={24} className="text-white" />,
+    title: "Trusted Partnership",
+    desc: "We build trust through transparency, open communication, and consistent delivery, backed by a proven record of long-term client success.",
+  },
+  {
+    icon: <Zap size={24} className="text-white" />,
+    title: "Core Expertise",
+    desc: "We combine multi-domain expertise with industry knowledge to deliver high-quality solutions and align technology with business goals.",
+  },
+  {
+    icon: <Globe size={24} className="text-white" />,
+    title: "Scalable Solutions",
+    desc: "Our scalable solutions adapt to evolving market conditions and business needs, ensuring future-proof operations.",
+  },
+];
+
+const SERVICES = [
+  {
+    icon: FaLaptopCode,
+    title: "Custom Software Development",
+    desc: "Tailored software built for speed, security, and long-term performance.",
+  },
+  {
+    icon: FaMobileAlt,
+    title: "Web Application Development",
+    desc: "Enterprise-grade web applications with modern UX and scalability.",
+  },
+  {
+    icon: FaRocket,
+    title: "Mobile App Development",
+    desc: "High-performance iOS & Android apps using modern frameworks.",
+  },
+  {
+    icon: FaCloud,
+    title: "AI Development Services",
+    desc: "AI-powered chatbots, automation engines, and predictive systems.",
+  },
+  {
+    icon: FaPalette,
+    title: "SaaS Application Development",
+    desc: "Secure, multi-tenant SaaS platforms built for global scale.",
+  },
+  {
+    icon: FaRobot,
+    title: "Software Integration Services",
+    desc: "Seamless integration across ERP, CRM, APIs, and cloud systems.",
+  },
+];
+
+const INDUSTRIES = [
+  { icon: FaLaptopCode, title: "IT & Software" },
+  { icon: FaShoppingCart, title: "Retail & E-commerce" },
+  { icon: FaUniversity, title: "Finance & Banking" },
+  { icon: FaTruck, title: "Logistics & Supply Chain" },
+  { icon: FaHeartbeat, title: "Healthcare" },
+  { icon: FaUsers, title: "Service Marketplace" },
+  { icon: FaIndustry, title: "Manufacturing & ERP" },
+];
+
+/* ===================== Page Component ===================== */
 export default function PortfolioPage() {
-    
-    // --- Re-mapping the provided CSS variables to local constants for cleaner JSX ---
-    const colors = {
-        primaryText: "var(--color-primary-text)", // #334EAC (Deep Blue)
-        secondaryText: "var(--color-secondary-text)", // #5D5D5D (Medium Gray)
-        primaryBg: "var(--color-primary-bg)", // #D0E4F2 (Light Blue/Accent Background)
-        secondaryBg: "var(--color-secondary-bg)", // #f9fafb (Off-White/Light Gray)
-        tertiaryBg: "var(--color-tertiary-bg)", // #608BC1 (Mid Blue/Action Background)
-        white: "var(--background)", // #ffffff
-    };
+  return (
+    <main
+      className="min-h-screen font-sans"
+      style={{ backgroundColor: COLORS.white, color: COLORS.secondaryText }}
+    >
 
-    const services = [
-        { icon: FaLaptopCode, title: "Custom Web Applications", desc: "Scalable, high-performance systems built with modern frameworks." },
-        { icon: FaMobileAlt, title: "Mobile App Development", desc: "Native-quality experiences for iOS and Android platforms." },
-        { icon: FaRocket, title: "SaaS Product Development", desc: "From MVP to enterprise-ready cloud solutions." },
-        { icon: FaCloud, title: "Cloud Architecture & DevOps", desc: "Optimizing deployments, security, and infrastructure costs." },
-        { icon: FaPalette, title: "Strategic UI/UX Design", desc: "User-centric design focused on engagement and conversion." },
-        { icon: FaRobot, title: "AI & Data Automation", desc: "Integrating intelligent systems to streamline operations." },
-    ];
+      {/* ===================== HERO ===================== */}
+      <section
+        className="px-6 md:px-24 py-32 text-center border-b-4 border-white shadow-inner"
+        style={{ backgroundColor: COLORS.primaryBg, color: COLORS.primaryText }}
+      >
+        <p className="text-xl font-medium mb-3">
+          Your Partner in Digital Innovation
+        </p>
 
-    return (
-        <main 
-            style={{ backgroundColor: colors.white, color: colors.secondaryText }}
-            className="min-h-screen font-sans"
+        <h1 className="text-5xl md:text-7xl font-extrabold leading-tight">
+          Engineering <span>Reliability.</span> Delivering{" "}
+          <span style={{ color: COLORS.tertiaryBg }}>Impact.</span>
+        </h1>
+
+        <p className="mt-6 text-xl max-w-4xl mx-auto">
+          We help businesses design, build, and scale high-quality software products engineered for growth.
+        </p>
+      </section>
+
+      {/* ===================== SERVICES ===================== */}
+      <section
+        className="py-24 px-6 md:px-24"
+        style={{ backgroundColor: COLORS.secondaryBg }}
+      >
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="text-4xl font-extrabold mb-4" style={{ color: COLORS.primaryText }}>
+            Core Service Offerings
+          </h2>
+
+          <p className="max-w-3xl mx-auto mb-16 text-lg">
+            End-to-end digital solutions covering the full software lifecycle.
+          </p>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {SERVICES.map(({ icon: Icon, title, desc }) => (
+              <div
+                key={title}
+                className="p-8 rounded-xl border border-gray-200 shadow-md hover:shadow-lg hover:-translate-y-1 transition text-left bg-white"
+              >
+                <Icon className="w-8 h-8 mb-4" style={{ color: COLORS.tertiaryBg }} />
+                <h3 className="text-xl font-bold" style={{ color: COLORS.primaryText }}>
+                  {title}
+                </h3>
+                <p className="mt-3 text-base">{desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ===================== INDUSTRIES ===================== */}
+      <section
+        className="py-24 px-6 md:px-24"
+        style={{ backgroundColor: COLORS.primaryBg }}
+      >
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="text-4xl font-extrabold mb-4" style={{ color: COLORS.primaryText }}>
+            Industries We Serve
+          </h2>
+
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 text-left mt-12">
+            {INDUSTRIES.map(({ icon: Icon, title }) => (
+              <div
+                key={title}
+                className="p-8 bg-white rounded-xl border border-gray-200 shadow-md flex items-center gap-4"
+              >
+                <div className="w-12 h-12 rounded-lg flex items-center justify-center bg-primary-bg">
+                  <Icon className="w-6 h-6" style={{ color: COLORS.primaryText }} />
+                </div>
+                <h3 className="text-lg font-semibold">{title}</h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ===================== WHY CHOOSE US ===================== */}
+      <section className="bg-white py-20">
+        <div className="max-w-7xl mx-auto px-6 lg:px-24 text-center">
+          <Text variant="h2" className="text-4xl font-extrabold mb-4">
+            Why Partner with Ameya?
+          </Text>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
+            {WHY_CHOOSE_US.map(({ title, desc, icon }) => (
+              <div
+                key={title}
+                className="bg-white rounded-2xl p-8 border border-gray-100 shadow-lg hover:-translate-y-1 transition"
+              >
+                <div className="w-12 h-12 flex items-center justify-center rounded-full bg-primary-text mx-auto mb-4">
+                  {icon}
+                </div>
+                <h4 className="text-xl font-bold mb-2">{title}</h4>
+                <Text variant="p" className="text-sm text-gray-600">
+                  {desc}
+                </Text>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ===================== CTA ===================== */}
+      <section className="max-w-6xl mx-auto px-6 md:px-24 py-20">
+        <div
+          className="rounded-xl p-14 text-center shadow-2xl border-2"
+          style={{
+            background: `linear-gradient(135deg, ${COLORS.primaryBg}, ${COLORS.white})`,
+            borderColor: COLORS.primaryText,
+          }}
         >
-            {/* ===================== HERO - Emphasis on Professionalism ===================== */}
-            <section 
-                style={{ backgroundColor: colors.primaryBg, color: colors.primaryText }} 
-                className="px-6 md:px-24 py-32 text-center border-b-4 border-white shadow-inner"
-            >
-                <p className="text-xl font-medium mb-3">
-                    Your Partner in Digital Innovation
-                </p>
-                <h1 className="text-5xl md:text-7xl font-extrabold leading-tight">
-                    Engineering <span style={{ color: colors.primaryText }}>Reliability.</span> Delivering <span style={{ color: colors.tertiaryBg }}>Impact.</span>
-                </h1>
+          <h3 className="text-4xl md:text-5xl font-extrabold" style={{ color: COLORS.primaryText }}>
+            Ready to Discuss Your Vision?
+          </h3>
 
-                <p 
-                    style={{ color: colors.secondaryText }} 
-                    className="mt-6 text-xl max-w-4xl mx-auto"
-                >
-                    We help businesses design, build, and scale high-quality software products that are engineered for performance and sustained growth.
-                </p>
+          <p className="mt-4 text-xl max-w-xl mx-auto">
+            Schedule a free consultation and transform your idea into reality.
+          </p>
 
-                <div className="mt-12 flex justify-center gap-6">
-                    <Link href="/contact" passHref legacyBehavior>
-                        <a 
-                            style={{ backgroundColor: colors.primaryText, color: colors.white }}
-                            className="px-10 py-4 rounded-lg font-bold shadow-xl transition duration-300 transform hover:scale-[1.03] hover:shadow-2xl"
-                        >
-                            Start Your Project Today
-                        </a>
-                    </Link>
-                    <Link href="#work" passHref legacyBehavior>
-                        <a
-                            style={{ borderColor: colors.primaryText, color: colors.primaryText }}
-                            className="px-10 py-4 border-2 rounded-lg font-semibold transition duration-300 hover:bg-white/50"
-                        >
-                            View Our Case Studies
-                        </a>
-                    </Link>
-                </div>
-            </section>
+          <div className="mt-8">
+            <Link href="/contact" className="px-10 py-4 rounded-lg font-bold shadow-xl inline-block bg-primary-text text-white">
+              Book Your Consultation
+            </Link>
+          </div>
+        </div>
+      </section>
 
-            {/* ===================== ABOUT - Clean Introduction ===================== */}
-            <section 
-                style={{ backgroundColor: colors.white }} 
-                className="py-24 px-6 md:px-24"
-            >
-                <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-12 items-center">
-                    <div className="md:col-span-1 text-center md:text-left">
-                        <h2 style={{ color: colors.primaryText }} className="text-4xl font-extrabold mb-4">
-                            Who We Are
-                        </h2>
-                        <div style={{ backgroundColor: colors.tertiaryBg }} className="h-1 w-20 mx-auto md:mx-0 rounded-full"></div>
-                    </div>
-                    <p 
-                        style={{ color: colors.secondaryText }} 
-                        className="md:col-span-2 text-lg leading-relaxed"
-                    >
-                        We are a dedicated team of senior engineers and designers committed to ethical, transparent, and quality-driven software development. Our focus is not just on writing code, but on delivering measurable business value and setting a foundation for long-term technical excellence.
-                    </p>
-                </div>
-            </section>
-
-            {/* ===================== SERVICES - Clear Value Proposition ===================== */}
-            <section 
-                style={{ backgroundColor: colors.secondaryBg }} 
-                className="py-24 px-6 md:px-24"
-            >
-                <div className="max-w-6xl mx-auto text-center">
-
-                    <h2 style={{ color: colors.primaryText }} className="text-4xl font-extrabold mb-4">
-                        Core Service Offerings
-                    </h2>
-                    <p style={{ color: colors.secondaryText }} className="max-w-3xl mx-auto mt-2 mb-16 text-lg">
-                        End-to-end digital solutions covering the full software development lifecycle.
-                    </p>
-
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {services.map((service, i) => (
-                            <div
-                                key={i}
-                                style={{ backgroundColor: colors.white }}
-                                className="p-8 rounded-xl border border-gray-200 shadow-md transition duration-300 hover:shadow-lg hover:-translate-y-1 text-left"
-                            >
-                                <service.icon style={{ color: colors.tertiaryBg }} className="w-8 h-8 mb-4" />
-                                <h3 style={{ color: colors.primaryText }} className="text-xl font-bold">{service.title}</h3>
-                                <p style={{ color: colors.secondaryText }} className="mt-3 text-base">
-                                    {service.desc}
-                                </p>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* ===================== STATS - Building Credibility ===================== */}
-            <section 
-                style={{ backgroundColor: colors.tertiaryBg }} 
-                className="py-16 px-6 md:px-24"
-            >
-                <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-10 text-center text-white">
-                    {[
-                        ["120+", "Projects Successfully Delivered"],
-                        ["98%", "Client Retention Rate"],
-                        ["6+", "Years of Industry Experience"],
-                        ["4.9/5", "Average Client Rating"],
-                    ].map(([value, label], i) => (
-                        <div key={i}>
-                            <p className="text-5xl font-extrabold mb-1">{value}</p>
-                            <p className="mt-2 text-sm font-light uppercase tracking-wider">{label}</p>
-                        </div>
-                    ))}
-                </div>
-            </section>
-
-
-            {/* ===================== CASE STUDIES - Showcase (Key Selling Point) ===================== */}
-            <section 
-                id="work" 
-                style={{ backgroundColor: colors.white }} 
-                className="py-24 px-6 md:px-24"
-            >
-                <div className="max-w-6xl mx-auto text-center">
-                    <h2 style={{ color: colors.primaryText }} className="text-4xl font-extrabold mb-4">
-                        Proof in the Products
-                    </h2>
-
-                    <p style={{ color: colors.secondaryText }} className="max-w-3xl mx-auto mt-2 mb-16 text-lg">
-                        See how we translate engineering excellence into tangible business results.
-                    </p>
-
-                    <div className="grid md:grid-cols-3 gap-10">
-                        {[
-                            {
-                                title: "Enterprise Workflow Automation",
-                                desc: "Achieved 60% operational efficiency gain by migrating legacy systems to a secure, modern SaaS platform.",
-                                tags: ["SaaS", "AWS", "Automation"]
-                            },
-                            {
-                                title: "High-Volume Fintech Engine",
-                                desc: "Developed a real-time transaction engine handling 1M+ daily requests with less than 10ms latency.",
-                                tags: ["Performance", "Fintech", "Node.js"]
-                            },
-                            {
-                                title: "E-commerce Conversion Uplift",
-                                desc: "Boosted customer conversion by 32% through strategic UX/UI redesign and performance optimization (Next.js).",
-                                tags: ["UI/UX", "E-commerce", "React"]
-                            }
-                        ].map((project, i) => (
-                            <div
-                                key={i}
-                                className="p-7 rounded-xl border-t-4 border-b-4 border-gray-200 shadow-lg hover:shadow-xl transition duration-300 hover:border-l-4 hover:border-r-4 text-left"
-                                style={{ borderColor: colors.primaryText }}
-                            >
-                                <h3 style={{ color: colors.primaryText }} className="text-xl font-bold">{project.title}</h3>
-                                <p style={{ color: colors.secondaryText }} className="mt-3 text-base leading-relaxed">{project.desc}</p>
-                                
-                                <div className="mt-4 flex flex-wrap gap-2">
-                                    {project.tags.map((tag, j) => (
-                                        <span key={j} className="text-xs font-medium px-3 py-1 rounded-full" style={{ backgroundColor: colors.primaryBg, color: colors.primaryText }}>
-                                            {tag}
-                                        </span>
-                                    ))}
-                                </div>
-
-                                <Link href="#" passHref legacyBehavior>
-                                    <a style={{ color: colors.tertiaryBg }} className="font-semibold inline-block mt-4 text-sm hover:underline">
-                                        View Full Case Study →
-                                    </a>
-                                </Link>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-
-            {/* ===================== WHY CHOOSE US - Trust & Differentiation ===================== */}
-            <section 
-                style={{ backgroundColor: colors.secondaryBg }} 
-                className="py-24 px-6 md:px-24"
-            >
-                <div className="max-w-6xl mx-auto text-center">
-                    <h2 style={{ color: colors.primaryText }} className="text-4xl font-extrabold mb-4">
-                        The Advantage You Need
-                    </h2>
-
-                    <div className="grid md:grid-cols-3 gap-10 mt-16 text-left">
-                        {[
-                            { icon: FaHandshake, title: "Total Transparency", desc: "Open communication, fixed budgets, and constant feedback loops." },
-                            { icon: FaTrophy, title: "Senior Engineering Talent", desc: "No junior staff—only experienced problem-solvers on your project." },
-                            { icon: FaStar, title: "Guaranteed Scalability", desc: "Architectures designed not just for today, but for 5x growth." },
-                        ].map((item, i) => (
-                            <div key={i} className="p-8 rounded-xl shadow-lg bg-white border border-gray-100 hover:shadow-xl transition duration-300">
-                                <item.icon style={{ color: colors.primaryText }} className="w-8 h-8 mb-3" />
-                                <h3 style={{ color: colors.primaryText }} className="text-xl font-bold mb-2">{item.title}</h3>
-                                <p style={{ color: colors.secondaryText }} className="text-base">{item.desc}</p>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-
-            {/* ===================== CTA - Final Push ===================== */}
-            <section 
-                style={{ backgroundColor: colors.white }} 
-                className="max-w-6xl mx-auto px-6 md:px-24 py-20"
-            >
-                <div 
-                    className="rounded-xl p-14 text-center shadow-2xl border-2"
-                    style={{ background: `linear-gradient(135deg, ${colors.primaryBg}, ${colors.white})`, borderColor: colors.primaryText }}
-                >
-                    <h3 style={{ color: colors.primaryText }} className="text-4xl md:text-5xl font-extrabold">
-                        Ready to Discuss Your Vision?
-                    </h3>
-
-                    <p style={{ color: colors.secondaryText }} className="mt-4 text-xl max-w-xl mx-auto">
-                        Schedule a free consultation to see how we can transform your product idea into reality.
-                    </p>
-
-                    <div className="mt-8 flex justify-center gap-4">
-                        <Link href="/contact" passHref legacyBehavior>
-                            <a 
-                                style={{ backgroundColor: colors.primaryText, color: colors.white }}
-                                className="px-10 py-4 rounded-lg font-bold shadow-xl transition duration-300 hover:scale-105"
-                            >
-                                Book Your Consultation
-                            </a>
-                        </Link>
-                    </div>
-                </div>
-            </section>
-        </main>
-    );
+    </main>
+  );
 }

@@ -86,7 +86,6 @@ function Icon({ name, className, style }) {
 
 export default function ServicesCategories() {
 
-    // Define CSS variables locally for cleaner access
     const colors = {
         primaryText: "var(--color-primary-text)", // #334EAC (Deep Blue)
         secondaryText: "var(--color-secondary-text)", // #5D5D5D (Medium Gray)
@@ -122,9 +121,6 @@ export default function ServicesCategories() {
                                     boxShadow: '0 4px 12px -3px rgba(0,0,0,0.05)', // Subtle initial shadow
                                     cursor: 'pointer' // Explicitly indicate clickability
                                 }}
-                                // On hover, we change the border color to a prominent blue and enhance the shadow
-                                // using inline style for borderColor directly here to override the base style on hover
-                                // and a class for shadow change
                                 onMouseEnter={(e) => {
                                     e.currentTarget.style.borderColor = colors.primaryText;
                                     e.currentTarget.style.boxShadow = '0 10px 25px -5px rgba(51,78,172,0.2)'; // More pronounced blue-ish shadow

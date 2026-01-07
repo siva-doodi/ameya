@@ -94,13 +94,13 @@ export default function ServicePage({ params }) {
       <div className="min-h-screen mt-8">
         <section className="text-center py-20 bg-primary-bg">
           <div className=' w-[50%] m-auto'>
-            <h1 className="text-5xl font-bold text-[#b72960] mb-2">{content.title}</h1>
+            <h1 className="text-5xl font-bold text-primary-text mb-2">{content.title}</h1>
             <Text variant="p">{content.description}</Text>
           </div>
         </section>
 
         <section className="py-16 px-6 max-w-6xl mx-auto">
-          <h2 className="text-3xl font-semibold text-[#b72960] mb-6">About Our {content.title}</h2>
+          <h2 className="text-3xl font-semibold text-primary-text mb-6">About Our {content.title}</h2>
           <Text variant="p">
             We believe in delivering excellence through creativity, innovation, and attention to detail.
             Our team ensures every project is tailored specifically to your needs, blending aesthetic
@@ -110,14 +110,14 @@ export default function ServicePage({ params }) {
 
         <section className="py-16 bg-[#FFFFFF]">
           <div className="max-w-6xl mx-auto px-6">
-            <h2 className="text-3xl font-semibold text-[#b72960] mb-10 text-center">Key Features</h2>
+            <h2 className="text-3xl font-semibold text-primary-text mb-10 text-center">Key Features</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {content.features.map((feature, index) => (
                 <div
                   key={index}
                   className="bg-white shadow-lg p-6 rounded-xl hover:shadow-2xl transition duration-300"
                 >
-                  <h3 className="text-xl font-bold text-[#b72960] mb-3">{feature}</h3>
+                  <h3 className="text-xl font-bold text-primary-text mb-3">{feature}</h3>
                   <p className="text-gray-600">
                     Our {feature} service ensures top-notch quality and attention to detail for maximum impact.
                   </p>
@@ -128,7 +128,7 @@ export default function ServicePage({ params }) {
         </section>
 
         <section className="py-20 px-6 bg-gray-50">
-          <h2 className="text-3xl font-semibold text-[#b72960] mb-10 text-center">Our Process</h2>
+          <h2 className="text-3xl font-semibold text-primary-text mb-10 text-center">Our Process</h2>
           <div className="space-y-10">
             {['Research & Planning', 'Creative Design', 'Development & Execution', 'Delivery & Support'].map(
               (step, index) => (
@@ -136,7 +136,7 @@ export default function ServicePage({ params }) {
                   key={index}
                   className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300"
                 >
-                  <h3 className="text-xl font-bold text-[#b72960] mb-2">{step}</h3>
+                  <h3 className="text-xl font-bold text-primary-text mb-2">{step}</h3>
                   <p className="text-gray-600">
                     We follow a structured process to ensure every step is executed with precision and creativity.
                   </p>
@@ -148,7 +148,7 @@ export default function ServicePage({ params }) {
 
         <section className="py-20 bg-white">
           <div className="max-w-6xl mx-auto px-6">
-            <h2 className="text-3xl font-semibold text-[#b72960] mb-10 text-center">What Our Clients Say</h2>
+            <h2 className="text-3xl font-semibold text-primary-text mb-10 text-center">What Our Clients Say</h2>
             <div className="grid md:grid-cols-3 gap-8">
               {[
                 { name: 'Priya Sharma', feedback: 'Absolutely loved the service! The team is highly skilled and professional.' },
@@ -160,7 +160,7 @@ export default function ServicePage({ params }) {
                   className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition"
                 >
                   <p className="text-gray-600 mb-4">"{testimonial.feedback}"</p>
-                  <h4 className="font-bold text-[#b72960]">{testimonial.name}</h4>
+                  <h4 className="font-bold text-primary-text">{testimonial.name}</h4>
                 </div>
               ))}
             </div>
@@ -174,7 +174,7 @@ export default function ServicePage({ params }) {
           </p>
           <a
             href="/contact"
-            className="bg-white text-[#b72960] px-6 py-3 rounded-lg font-semibold hover:bg-pink-100 transition"
+            className="bg-white text-primary-text px-6 py-3 rounded-lg font-semibold hover:bg-pink-100 transition"
           >
             Contact Us
           </a>
